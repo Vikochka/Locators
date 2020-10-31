@@ -65,8 +65,16 @@ public class Locators {
 
         driver.findElement(singleClassNameLocator);
         driver.findElement(directDescendantLocator);
-        driver.findElement(attribute);
         driver.findElement(complexLocator);
+        driver.findElement(attributeEqualLocator);
+        driver.findElement(attribute);
+        driver.findElement(attributeTilda);
+        driver.findElement(atributeLocator);
+        driver.findElement(Locator);
+        driver.findElement(Locator_2);
+        driver.findElement(attributeDol);
+        driver.findElement(attributeStar);
+        driver.findElement(attributeSuf);
 
         driver.quit();
     }
