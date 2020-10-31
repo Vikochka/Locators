@@ -1,10 +1,6 @@
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import java.util.List;
 
 public class Locators {
 
@@ -45,18 +41,31 @@ public class Locators {
 
         By attributeEqualLocator = By.cssSelector("meta[name='data-layer']");
 
+        By attribute = By.cssSelector("meta[name~='data-layer']");
+
+        By attributeTilda = By.cssSelector("meta[name|='data-layer']");
+
+        By attributeSuf = By.cssSelector("meta[name^='data-layer']");
+
+        By attributeStar = By.cssSelector("meta[name*='data-layer']");
+
+        By attributeDol = By.cssSelector("meta[name$='data-layer']");
+
         By Locator = By.cssSelector("div.layout");
 
         By Locator_2 = By.cssSelector("div span");
 
         By complexLocator = By.cssSelector("div.container span.glyphicon");
 
+        By atributeLocator = By.cssSelector("meta[l]");
+
+
         ChromeDriver driver = new ChromeDriver();
         driver.get(URL);
 
         driver.findElement(singleClassNameLocator);
         driver.findElement(directDescendantLocator);
-        driver.findElement(attributeEqualLocator);
+        driver.findElement(attribute);
         driver.findElement(complexLocator);
 
         driver.quit();
