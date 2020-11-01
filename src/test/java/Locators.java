@@ -79,9 +79,23 @@ public class Locators {
         driver.quit();
     }
 
-//    @Test
-//    public void xpathSelectorTest(){
-//
-//    }
+    @Test
+    public void xpathSelectorTest(){
+        By adfox_158272444883353136 =By.xpath("//*[@id=/'adfox_158272444883353136/']");
+        By _blank =By.xpath("/html/body/div[2]/main/div[1]/div[1]/div/div[2]/div/div[1]/div/a[1]");
+        By ym_native_frame =By.xpath("/html/body/iframe");
+        By ym_viewport =By.xpath("/html/body/ym-measure[1]");
+
+
+        ChromeDriver driver = new ChromeDriver();
+        driver.get(URL);
+
+        driver.findElement(adfox_158272444883353136);
+        driver.findElement(_blank);
+        driver.findElement(ym_native_frame);
+        driver.findElement(ym_viewport);
+
+        driver.quit();
+    }
 }
 
